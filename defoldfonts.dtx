@@ -1,0 +1,256 @@
+% \iffalse meta-comment
+% ======================================================================
+% defoldfonts.dtx
+% Copyright © 2008–2023 Markus Kohm
+%
+% Development of this work is taking place at
+% <https://github.com/komascript/defoldfont>.  New issues should be
+% reported there as well as known issues can be found.
+%
+% This work may be distributed and/or modified under the conditions of
+% the LaTeX Project Public License, version 1.3c of the license.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.<3c or later is part of all distributions of LaTeX
+% version 2005/12/01 or later and of this work.
+%
+% This work has the LPPL maintenance status "author-maintained".
+%
+% The Current Maintainer and author of this work is Markus Kohm.
+%
+% This work consists of the file `defoldfonts.dtx' and `README.md'.
+%
+% The recommended way to install `defoldfonts' is to use
+% the package manager of your TeX distribution.
+% ======================================================================
+%
+%<*dtx>
+\ifx\ProvidesFile\undefined\def\ProvidesFile#1[#2]{}\fi
+\ProvidesFile{defoldfonts.dtx}
+%</dtx>
+%<*dtx|package>
+%<package>\ProvidePackage{defoldfonts}
+  [2023-07-26 v0.1
+%<dtx> sources and unpack driver of
+  re-implementation of deprecated KOMA-Script code]
+%<package>}
+%</dtx|package>
+%<*dtx>
+\ifx\documentclass\undefined
+  \input docstrip.tex
+  \generate{%
+    \file{defoldfonts.sty}{%
+      \from{defoldfonts.dtx}{package}%
+    }%
+  }%
+\else
+  \let\endbatchfile\relax
+\fi
+\endbatchfile
+\documentclass[ngerman,USenglish]{koma-script-source-doc}
+\setcounter{IndexColumns}{2}  
+\usepackage{babel}
+\usepackage{csquotes}
+\usepackage[style=alphabetic]{biblatex}
+\begin{filecontents}[force]{\jobname.bib}
+@online{pkg:koma-script,
+  author={Markus Kohm},
+  version={3.41},
+  date={2023-07-07},
+  title={{\KOMAScript} --- A bundle of versatile classes and packages},
+  url={https://ctan.org/pkg/koma-script},
+  urldate={2023-07-14},
+  note={The \KOMAScript{} bundle provides replacements for the \pkg*{article},
+        \pkg*{report}, and \pkg*{book} classes with emphasis on typography and
+        versatility. There is also a letter class.},
+}
+@manual{pkg:koma-script:manual:de,
+  author={Markus Kohm},
+  date={2023-06-16},
+  title={{\KOMAScript}},
+  subtitle={Die Anleitung},
+  url={http://mirrors.ctan.org/macros/latex/contrib/koma-script/scrguide-de.pdf},
+  urldate={2023-07-04},
+}
+@manual{pkg:koma-script:manual:en,
+  author={Markus Kohm},
+  date={2023-06-16},
+  title={{\KOMAScript}},
+  subtitle={The Guide},
+  url={http://mirrors.ctan.org/macros/latex/contrib/koma-script/scrguide-en.pdf},
+  urldate={2023-07-14},
+}
+\end{filecontents}
+\addbibresource{\jobname.bib}
+\setcounter{StandardModuleDepth}{2}
+\begin{document}
+  \nocite{pkg:koma-script,pkg:koma-script:manual:en,pkg:koma-script:manual:de}
+  \DocInput{defoldfonts.dtx}
+\end{document}
+%</dtx>
+%\fi
+%
+% \changes{v0.1}{2023/06/01}{start of \KOMAScript{} spin-off}
+%
+% \GetFileInfo{defoldfonts.dtx}
+% \title{Defining Old Font Commands}
+% \author{\href{mailto:komascript@gmx.info}{Markus Kohm}}
+% \date{Version \filedate{} \fileversion}
+% \maketitle
+% \begin{abstract}
+%   The package defines the old font commands \cs{rm}, \cs{sf}, \cs{tt},
+%   \cs{bf}, \cs{it}, and \cs{sc} that became obsolete with \LaTeXe{} and has
+%   been removed from the \LaTeX{} kernel. It also defines the old
+%   \href{https://komascript.de/}{\KOMAScript} font command \cs{sfb}. It can
+%   be useful if you use a class like the
+%   \href{https://komascript.de/}{\KOMAScript} classes, which do not define
+%   the old commands by default, and also an old \BibTeX{} style or package,
+%   that depends on these commands. However, it should be seen as an emergency
+%   workaround rather than a solution.
+% \end{abstract}
+%
+% \tableofcontents
+%
+%\iffalse
+%<*doc>
+%\fi
+\section{What are the possible reasons for using package
+  \texorpdfstring{\pkg*{defoldfonts}}{defoldfonts} and how to do it?}
+\label{sec:reasons}
+
+\DescribeCommand{\rm}%
+\DescribeCommand{\sf}%
+\DescribeCommand{\tt}%
+\DescribeCommand{\bf}%
+\DescribeCommand{\it}%
+\DescribeCommand{\sl}%
+\DescribeCommand{\sc}%
+\DescribeCommand{\sfb}%
+With \LaTeXe{} in 1994 the font commands of \LaTeX~2.09 became obsolete. These
+are not longer defined in the \LaTeX{} kernel. Instead of them, you should use
+\cs{rmfamily} resp. \cs{textrm}, \cs{sffamily} resp. \cs{textsf},
+\cs{ttfamily} resp. \cs{texttt}, \cs{bfseries} resp. \cs{textbf}, \cs{itshape}
+resp. \cs{textit}, \cs{slshape} resp. \cs{textsl}, and \cs{scshape}
+resp. \cs{testsc}. The old \href{https://komascript.de/}{\KOMAScript} command
+\cs{sfb} should be replaced by a combination of \cs{sf} and \cs{bf}
+resp. \cs{textsf} and \cs{textbf}. But unfortunately not only some old
+\BibTeX{} styles but even some packages still use these obsolete commands. The
+standard classes therefore still define them. The
+\href{https://komascript.de/}{\KOMAScript} classes also define them, but only
+to show an error message like:
+\begin{verbatim}
+  Class scrartcl Error: undefined old font command `\bf'.
+
+  See the scrartcl class documentation for explanation.
+  Type  H <return>  for immediate help.
+   ...                                              
+
+  l.3 \bf
+\end{verbatim}
+Within an interactive \LaTeX{} run you can get some more information typing
+\texttt{H} and pressing the \texttt{return} key:
+\begin{verbatim}
+  You should note that since 1994 LaTeX2e provides a new font selection scheme
+  called NFSS2 with several new, combinable font commands. KOMA-Script
+  classes had defined the old font commands like `\bf' only for compatibility
+  with old LaTeX 2.09 document styles of Script 2.0. Nevertheless, these
+  commands are deprecated and undocumented at least since 2003. Since 2013
+  KOMA-Script classes warned about soon removement of these deprecated commands.
+  Now, after two decades of LaTeX2e and NFSS2, these commands will not work any
+  more. If loading a package results in this error message, you should contact
+  the author of that package and ask him to replace the deprecated font command
+  `\bf', e.g., by `\normalfont \bfseries `. Otherwise you should reconfigure
+  or replace the package. If you have used the old font command `\bf' yourself,
+  you should replace it, e.g., by `\normalfont \bfseries '.
+  To make it work for now, you can use the already also deprecated class option
+  `enabledeprecatedfontcommands'.
+\end{verbatim}
+So to fix the issue, you could load the class with option
+\opt{enabledeprecatedfontcommands}. But because this option is also
+deprecated, this would result in warning messages like:
+\begin{verbatim}
+  Class scrartcl Warning: deprecated option `enabledeprecatedfontcommands'.
+  (scrartcl)              Note, that this option was already depreacted when
+  (scrartcl)              it has been defined. Support for old font commands
+  (scrartcl)              has been removed from KOMA-Script more than one
+  (scrartcl)              decade ago. It is not recommended to use them any
+  (scrartcl)              longer. Therefore usage of this class option also
+  (scrartcl)              is not recommended.
+\end{verbatim}
+and:
+\begin{verbatim}
+  Class scrartcl Warning: deprecated old font command `\bf' used.
+  (scrartcl)              You should note, that since 1994 LaTeX2e provides a
+  (scrartcl)              new font selection scheme called NFSS2 with several
+  (scrartcl)              new, combinable font commands. New KOMA-Script classes
+  (scrartcl)              defined the old font commands like `\bf' only for
+  (scrartcl)              compatibility with LaTeX 2.09 document styles of
+  (scrartcl)              Script 2.0. These commands are deprecated and
+  (scrartcl)              undocumented at least since 2003. Since 2013,
+  (scrartcl)              KOMA-Script classes warned about soon removement of
+  (scrartcl)              these deprecated commands. Now, after two decades of
+  (scrartcl)              LaTeX2e, NFSS2, and KOMA-Script these commands will
+  (scrartcl)              not work any longer. If loading a package results in
+  (scrartcl)              this message you should contact the author of that
+  (scrartcl)              package and ask him to replace the depracted font
+  (scrartcl)              command `\bf', e.g., by `\normalfont \bfseries '.
+  (scrartcl)              Otherwise you should reconfigure or replace the
+  (scrartcl)              package. If you have used the old font command
+  (scrartcl)              `\bf' yourself you should replace it, e.g., by
+  (scrartcl)              `\normalfont \bfseries ' on input line ….
+\end{verbatim}
+As an alternative you can load package \pkg*{defoldfonts}.
+
+The package should be loaded in the preamble using:
+\begin{verbatim}
+  \usepackage{defoldfonts}
+\end{verbatim}
+Usually the order of \pkg*{defoldfonts} and other packages is irrelevant.
+
+% \iffalse
+%</doc>
+% \fi
+%
+% \MaybeStop{\printbibliography[heading=bibintoc]\PrintIndex}
+%
+% \iffalse
+%<*package>
+% \fi
+% \section{Implementation}
+% \label{sec:implementation}
+%
+%    \begin{macrocode}
+\ProcessOptions\relax
+%    \end{macrocode}
+%
+% \subsection{Deprecated font commands}
+% \label{ssec:deprecatedfonts}
+%
+% \begin{command}{\rm,\sf,\tt,\bf,\it,\sl,\sc,\sfb}
+% We define these commands without compromise:
+%    \begin{macrocode}
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\DeclareOldFontCommand{\sfb}{\normalfont\sffamily\bfseries}{\@nomath\sfb}
+%    \end{macrocode}
+% \end{command}
+%
+% \iffalse
+%</package>
+% \fi
+%
+% \Finale
+% \PrintChanges
+%  
+% \endinput
+% Local Variables:
+% mode: doctex
+% ispell-local-dictionary: "en_US"
+% eval: (flyspell-mode 1)
+% TeX-master: t
+% End:
