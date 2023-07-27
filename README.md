@@ -88,7 +88,7 @@ manual and (optionally) the implemenation documentation of
 # How to Contribute
 
 To become a contributor, clone the code and do heavy testing. If you find an
-issue, please report it using the [issue tracker](../../../issues). You can
+issue, please report it using the [issue tracker](../../issues). You can
 also, e.g., make new test files to the packages. See the
 [`l3build`](https://ctan.prg/pkg/l3build) manual for more information about
 tests. If you've created a new test and think that it would be useful. Please
