@@ -81,9 +81,9 @@ to locally install the package with manual.
 
 # Unpacking and Installation for Users
 
-If you are a user, you should wait until all the packages have been added to
-your preferred TeX distribution. Then you can use the package manager of your
-TeX distribution to install all the packages.
+If you are a user, you should wait until the package has been added to your
+preferred TeX distribution. Then you can use the package manager of your TeX
+distribution to install the package.
 
 # How to get the Manuals
 
