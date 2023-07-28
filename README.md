@@ -1,9 +1,7 @@
 # Package `defoldfonts`
 
-Copyright © 2019–2023 Markus Kohm
-
-Release: unreleased
-
+Copyright © 2019–2023 Markus Kohm  
+Release: 2023-07-28 v1.0  
 License: LPPL 1.3c
 
 KOMA presents the `defoldfonts` package to define old font commands even if
@@ -44,23 +42,39 @@ another class has is used.
 
 # Unpacking and Installation for Developers and Distributors
 
-Distributors should be aware that there is no official release of the new
-standalone packages `defoldfonts` yet. There is only a developer
-version. The first official release will hopefully come with the next
-KOMA-Script release.
+A legal distribution of `defoldfonts` contain at least:
 
-*For now, distributors should just ignore this package.*
+* `defoldfonts.dtx`
+* `README.md`
 
-Developers can use `l3build` to unpack and install all files and even the
+and optionally:
+
+* `LICENSE.md`
+* `defoldfonts.sty`
+* `defoldfonts.pdf`
+
+For generation of `defoldfonts.sty` you can use:
+
+    l3build unpack
+
+The unpacked files than can be found at `build/local/defoldfonts.sty`.
+
+For generation of the manual `defoldfonts.pdf` you can use:
+
+    l3build doc
+
+The manual `defoldfonts.pdf` than can be found in the main directory.
+
+Developers also can use `l3build` to unpack and install all files and even the
 documentation. Run
 
     l3build install
 	
-to locally install the package of the sub-folder without manuals, or run
+to locally install the package without manual, or run
 
     l3build install --full
 	
-to locally install the package of the sub-folder with manuals.
+to locally install the package with manual.
 
 # Unpacking and Installation for Users
 

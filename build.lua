@@ -17,8 +17,7 @@
          defoldfonts.
 ]]
 
-release_info = "2023-07-26 v0.1"
-
+release_info = "2023-07-28 v1.0"
 -- Bundle and modules
 
 module  = "defoldfonts"
@@ -65,18 +64,18 @@ function update_tag (file,content,tagname,tagdate)
 			  "(©%s*%d%d%d%d)%s+",
 			  "%1–" .. tagyear .. " ")
    content = string.gsub (content, tagyear .. "–" .. tagyear, tagyear)
-  if string.match (file, "%.dtx$") then
+   if string.match (file, "%.dtx$") then
       return string.gsub (content,
                           "%[%d%d%d%d%-%d%d%-%d%d v[%d%.]*%d+",
                           "[" .. tagdate .. " v" .. tagname)
    elseif string.match (file, "%.md$") then
       return string.gsub (content,
-                          "\nRelease: %d%d%d%d%-%d%d%-%d%d v[%d%.]*%d+  \n",
-                          "\nRelease: " .. tagdate .. " v" .. tagname .. "  \n")
+                          "\nRelease: %d%d%d%d%-%d%d%-%d%d v[%d%.]*%d+",
+                          "\nRelease: " .. tagdate .. " v" .. tagname )
    elseif string.match (file, "%.lua$") then
       return string.gsub (content,
-                          '\nrelease_info%s*=%s*"%d%d%d%d%-%d%d%-%d%d%s*v[%d%.]*%d+"%s*\n',
-                          '\nrelease_info = "' .. tagdate .. " v" .. tagname .. '"\n')
+                          '\nrelease_info%s*=%s*"%d%d%d%d%-%d%d%-%d%d%s*v[%d%.]*%d+"',
+                          '\nrelease_info = "' .. tagdate .. " v" .. tagname .. '"' )
    end
    return content
 end
