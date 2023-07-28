@@ -16,8 +16,6 @@ The latest version of this license is in
 and version 1.3c or later is part of all distributions of LaTeX
 version 2005/12/01 or later.
 
-This work has the LPPL maintenance status "maintained".
-
 The Current Maintainer and author of this work is Markus Kohm.
 
 ----------------------------------------------------------------------------
