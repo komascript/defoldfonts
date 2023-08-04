@@ -103,7 +103,7 @@ To become a contributor, clone the code and do heavy testing. If you find an
 issue, please report it using the [issue
 tracker](https://github.com/komascript/defoldfonts/issues). You can also,
 e.g., make new test files to the packages. See the
-[`l3build`](https://ctan.prg/pkg/l3build) manual for more information about
+[`l3build`](https://ctan.org/pkg/l3build) manual for more information about
 tests. If you've created a new test and think that it would be useful. Please
 either do a pull request or [add a new
 issue](https://github.com/komascript/defoldfonts/issues/new/choose) and
