@@ -51,7 +51,7 @@ and optionally:
 * `defoldfonts.sty`
 * `defoldfonts.pdf`
 
-For generation of `defoldfonts.sty` distributors should download an unpack a
+For generation of `defoldfonts.sty` distributors should download and unpack a
 [release archive from
 github](https://github.com/komascript/defoldfonts/releases). Developers can
 also clone the [current developer
