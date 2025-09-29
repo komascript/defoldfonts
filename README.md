@@ -1,7 +1,7 @@
 # Package `defoldfonts`
 
-Copyright © 2019–2023 Markus Kohm  
-Release: 2023-07-28 v1.0  
+Copyright © 2019–2025 Markus Kohm  
+Release: 2025-09-29 v1.1  
 License: LPPL 1.3c
 
 KOMA presents the `defoldfonts` package to define old font commands even if
