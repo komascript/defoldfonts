@@ -9,6 +9,15 @@ the class does not.
 
 ----------------------------------------------------------------------------
 
+The project is currently hosted and managed on
+[Codeberg](https://codeberg.org/komascript/defoldfonts). For safety reasons,
+the repository will continue to be mirrored on
+[GitHub](https://github.com/komascript/defoldfonts) for some time. However,
+error reports and push requests will only be acknowledged on
+[Codeberg](https://codeberg.org/komascript/defoldfonts/issues).
+
+----------------------------------------------------------------------------
+
 This work may be distributed and/or modified under the conditions of
 the LaTeX Project Public License, version 1.3c of the license.
 The latest version of this license is in
