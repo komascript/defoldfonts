@@ -61,10 +61,9 @@ and optionally:
 * `defoldfonts.pdf`
 
 For generation of `defoldfonts.sty` distributors should download and unpack a
-[release archive from
-github](https://github.com/komascript/defoldfonts/releases). Developers can
+[release archive from Codeberg](https://codeberg.org/komascript/defoldfonts/tags). Developers can
 also clone the [current developer
-source](https://github.com/komascript/defoldfonts.git). With one of these, you
+source](https://codeberg.org/komascript/defoldfonts.git). With one of these, you
 can use:
 
     l3build unpack
@@ -110,12 +109,12 @@ Distributors](#unpacking-and-installation-for-developers-and-distributors).
 
 To become a contributor, clone the code and do heavy testing. If you find an
 issue, please report it using the [issue
-tracker](https://github.com/komascript/defoldfonts/issues). You can also,
+tracker](https://codeberg.org/komascript/defoldfonts/issues). You can also,
 e.g., make new test files to the packages. See the
 [`l3build`](https://ctan.org/pkg/l3build) manual for more information about
 tests. If you've created a new test and think that it would be useful. Please
 either do a pull request or [add a new
-issue](https://github.com/komascript/defoldfonts/issues/new/choose) and
+issue](https://codeberg.org/komascript/defoldfonts/issues/new) and
 include your test file.
 
 Another kind of contribution would be to contact an author of one of the
@@ -126,16 +125,16 @@ corresponding enhancement package from this project into her or his package.
 
 If you think you have found a bug (or another kind of issue) using
 `defoldfonts` you should use the [issue
-tracker](https://github.com/komascript/defoldfonts/issues). Please first
+tracker](https://codeberg.org/komascript/defoldfonts/issues). Please first
 search for similar issues already reported and maybe also already fixed and
 closed. Maybe the replies to such a similar report would help you too.
 
 If your issue is new, you should report it also using the [issue
-tracker](https://github.com/komascript/defoldfonts/issues). Please be kind,
+tracker](https://codeberg.org/komascript/defoldfonts/issues). Please be kind,
 not only when writing the report but also when reading replies and commenting
 or answering. And please always add a minimal working example and usually the
 relevant parts of the `log`-file to your report. Please use the [markdown for
-code](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks)
+code](https://docs.codeberg.org/markdown/preformatted-text/)
 to add such files into the text of your report. The correct language
 identifier for LaTeX code would be `latex`. For `log`-files you won't need any
 language identifier. Usually you should not use attachments for code or
