@@ -2,7 +2,7 @@
 
 --[[
    Build script for defoldfonts (KOMA-Script spin-off)
-   Copyright © 2023 Markus Kohm
+   Copyright © 2023–2025 Markus Kohm
 
    This file is part of the build system of defoldfonts.
 
@@ -17,7 +17,7 @@
          defoldfonts.
 ]]
 
-release_info = "2023-07-28 v1.0"
+release_info = "2025-09-29 v1.1"
 -- Bundle and modules
 
 module  = "defoldfonts"
@@ -40,12 +40,10 @@ uploadconfig = {
    summary  = "define old font commands",
    topic    = { "float" },
    ctanPath = "/macros/latex/contrib/"..module,
-   home        = "https://github.com/komascript/thirdpartyhacks",
-   bugtracker  = "https://github.com/komascript/thirdpartyhacks/issues",
+   home        = "https://codeberg.org/komascript/defoldfonts",
+   bugtracker  = "https://codeberg.org/komascript/defoldfonts/issues",
    description = "In 1994 with LaTeX2ε the old font commands \\rm, \\sf, \\tt, \\bf, \\it, \\sl, and \\sc became obsolete. Package defoldfonts defines them and also the deprecated KOMA-Script command \\sfb.",
    version     = release_info,
-   announcement_file = "announcement-" .. release_info .. ".txt",
-   note_file         = "upload-note-" .. release_info .. ".txt",
 }
 
 -- Detail how to set the version automatically
